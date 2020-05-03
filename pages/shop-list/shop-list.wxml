@@ -1,0 +1,28 @@
+<form bindsubmit="formSubmit">
+<view class="section">
+    <view style='flex:1.1;text-align:center;padding-top:4rpx;' bindchange="bindPickerChange" >
+        <text>{{city}}</text><i style="margin-left:10rpx;" class="fa fa-angle-down"></i>
+    </view>
+    <view style='flex:4;position: relative;'>
+      <input bindconfirm='gosearch' class="search" confirm-type="search" name="keyword" placeholder='请输入地址' value=""></input>
+      <button class="sc fa fa-search" formType="submit"></button>
+    </view>
+</view>
+</form>
+<view class="shoplist">
+   <view class="shop" wx:for="{{shoplist}}" bindtap='setDefaultShop' data-id="{{item.shop_id}}">
+      <view class="shopname">
+         <view class="left">{{item.shop_name}}</view>
+         <view class="right">{{item.distance_unit}}</view>
+      </view>
+      <view class="time">
+        <i style="margin-right:10rpx;" class="fa fa-clock-o"></i> <text>{{item.shop_hours}}</text>
+      </view>
+      <view class="address">
+        <i style="margin-right:10rpx;" class="fa fa-map-marker"></i> <text>{{item.address
+}}</text>
+      </view>
+   </view>
+</view>
+
+

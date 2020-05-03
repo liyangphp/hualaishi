@@ -1,0 +1,102 @@
+page{
+ background-color: #F1F1F1;
+}
+
+.section{
+  background: #fff;
+  width:100%;
+  height:80rpx;
+  line-height:80rpx;
+  padding-bottom:4rpx;
+  text-align: center;
+  display: flex;
+  justify-content:center;
+  align-content: center;
+}
+
+button{
+  background-color: #F1F1F1;
+}
+
+button::after{
+border: none;
+}
+
+
+
+.section .search{
+  display:inline-block;
+  border-radius: 25px;
+  border:1px solid #F1F1F1;
+  font-size:24rpx;
+  background-color: #F1F1F1;
+  vertical-align: middle;
+  text-align: left;
+  height: 50rpx;
+  padding-left:20rpx;
+  line-height: 50rpx;
+  color: #999;
+  width:90%;
+  
+}
+
+.sc{
+  position: absolute;
+  right:40rpx;
+  top:28rpx; 
+}
+
+.textClass{
+  margin-left: 60rpx;
+  color: #999;
+}
+
+.shoplist{
+  background: #fff;
+  width:100%;
+  margin-top:20rpx;
+}
+
+.shop{
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #ccc;
+  padding:20rpx auto;
+}
+
+.shop .shopname{
+  width:100%;
+  height:100%;
+  padding:4rpx 20rpx;
+  margin:0 auto;
+}
+
+.shopname .left{
+  width:70%;
+  text-align: left;
+  display: inline-block;
+  font-size:32rpx;
+  font-weight: 600;
+}
+
+.shopname .right{
+  width:30%;
+  text-align: center;
+  display: inline-block;
+  font-size:32rpx;
+}
+
+.shop .time{
+  width:100%;
+  margin:0 auto;
+  padding:4rpx 20rpx;
+}
+
+.shop .address{
+  width:100%;
+  margin:0 auto;
+  padding:4rpx 20rpx;
+}
+
+
+

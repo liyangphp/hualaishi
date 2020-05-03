@@ -1,0 +1,266 @@
+/* 搜索框 */
+page{
+
+}
+.order{
+  /* background-color: #f7efef; */
+  
+}
+
+/* 顶部商家信息、重新选择 */
+.order .header{
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #1f1f1f;
+  opacity: 0.6;
+  color: #fff;
+  height: 70rpx;
+  font-size: 28rpx;
+  top: 0;
+  line-height: 70rpx;
+}
+
+.header .shopName{
+  padding-left: 20rpx;
+}
+
+.header .choice{
+  padding-right: 26rpx;
+}
+
+/* 顶部图片 */
+.order .topImg{
+  width: 100%;
+  height: 280rpx;
+}
+
+.topImg image{
+  width: 100%;
+  height: 100%;
+}
+
+.main{
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  height: 100%;
+}
+
+
+/* 左侧分类选项 */
+.leftNav{
+  /* display: flex;
+  flex-direction: column;
+  justify-content: flex-start; */
+  /* border: 1px solid #bfb0b0; */
+  width: 120rpx;
+}
+
+.leftNav .title{
+  color: #000;
+  font-size: 32rpx;
+  line-height: 90rpx;
+  padding-left: 24rpx;
+  padding-right: 30rpx;
+  background: #bfb0b0;
+  border-bottom: 1px solid #fff;
+}
+
+.leftNav .left_cell_selected{
+  background-color: #fff;
+}
+
+.content-right{
+  width: 84%;
+  background: #fff;
+}
+
+/* 底部结算区域 */
+.order .footer{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background-color: #fff;
+  box-shadow:0px 0px 24px 0px rgba(166,166,166,0.16);
+  height: 100rpx;
+  padding-left: 20rpx;
+  /* line-height: 100rpx; */
+  padding-top: 6rpx;
+}
+
+.footer .cartImg{
+  display: inline-block;
+  position: relative;
+  width: 60rpx;
+  height: 60rpx;
+  padding: 14rpx 14rpx;
+  border: 2px solid #000;
+  border-radius: 16rpx;
+  background: #fff;
+  
+}
+
+.cartImg image{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.cartImg .num{
+  position: absolute;
+  display: inline-block;
+  color: #fff;
+  background-color: red;
+  width: 45rpx;
+  height: 45rpx;
+  border-radius: 50%;
+  line-height: 45rpx;
+  text-align: center;
+  right: -6rpx;
+  top: -6rpx;
+  font-size: 28rpx;
+}
+
+
+.footer .price{
+  /* display: block; */
+  color: red;
+  padding-left: 30rpx;
+}
+
+.footer .deliveryCost{
+  color: rgba(166, 166, 166, 1);
+  font-size: 28rpx;
+  padding-left: 20rpx;
+}
+
+
+.footer .payment{
+  float: right;
+  font-size: 32rpx;
+  line-height: 100rpx;
+}
+
+.containers{
+  width: 100%;
+  height: 100%;
+}
+
+.cot-header{
+  font-size: 30rpx;
+
+}
+
+.cot-header .cot-title{
+  color: rgba(11, 11, 11, 1);
+  line-height: 70rpx;
+  padding-left: 20rpx;
+}
+
+.cot-header .cot-text{
+  color: #A6A6A6;
+  padding-left: 24rpx;
+}
+
+.cot-mian{
+  margin-top: 10rpx;
+}
+
+.cot-mian .cot-content{
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 20rpx;
+}
+
+.cot-mian .cot-content-img{
+  width: 220rpx;
+  height: 158rpx;
+}
+
+.cot-mian .cot-content-img image{
+  width: 100%;
+  height: 100%;
+  margin-top:12rpx;
+  overflow: hidden;
+}
+
+.cot-content .cot-right{
+  padding-left: 20rpx;
+  width: 100%;
+}
+
+.cot-right .cot-top{
+  display: flex;
+  flex-direction: column;
+}
+
+.cot-right .cot-title{
+  font-size: 36rpx;
+  line-height: 58rpx;
+}
+
+.cot-right .cot-text{
+  color: #A6A6A6;
+  font-size: 24rpx;
+}
+
+.cot-footer{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  /* align-items: baseline; */
+  padding-top: 30rpx;
+  line-height: 36rpx;
+  position: relative;
+}
+
+.cot-footer .cot-new-price{
+  color: red;
+  font-size: 36rpx;
+  
+}
+
+.cot-footer .cot-old-price{
+  color: #A6A6A6;
+  text-decoration: line-through;
+  font-size: 22rpx;
+  padding-right: 32rpx;
+  line-height: 42rpx;
+} 
+
+.cot-footer .cot-minus,
+.cot-footer .cot-add{
+  display: block;
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  border: 1rpx solid #424242;
+  background: #fff;
+  font-weight: bold;
+  font-size: 28rpx;
+  text-align: center;
+  line-height: 38rpx;
+  margin-bottom: 8rpx;
+  position: absolute;
+  bottom: 1rpx;
+}
+
+.cot-footer .cot-add{
+  background: #A6A6A6;
+  right: 35rpx;
+}
+
+.cot-footer .cot-minus{
+  right: 150rpx;
+}
+
+.cot-footer .cot-Num{
+  position: absolute;
+  font-size: 36rpx;
+  padding: 0 20rpx;
+  line-height: 22rpx;
+  bottom: 19rpx;
+  right: 88rpx;
+}

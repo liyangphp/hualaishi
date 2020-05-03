@@ -1,0 +1,62 @@
+<!--pages/shop-goods/shop-goods.wxml-->
+<!-- 精品推荐 -->
+<view class='new-product'>
+  <view class='title-bar' bindtap='torday' >
+    <view class='space'></view>
+    <view class="weui-loadmore weui-loadmore_line" style="margin-top:3rem;">
+      <view class="weui-loadmore__tips weui-loadmore__tips_in-line">砍价专区</view>
+    </view>
+  </view>
+  <view class='scroll-product'>
+    <scroll-view class="scroll-view_x" bindscrolltolower="onScrollToLower" bindscrolltoupper="onScrollToUp"  scroll-x style="width: auto;overflow:hidden;">
+      <block wx:for="{{ activeList.data }}" wx:for-item="item" >
+      <form bindsubmit="onTargetActive" report-submit="true">
+            <button formType="submit" class="btn-normal" style="display:inline-block" data-id="{{ item.active_id }}">
+              <view class='item' data-id="{{item.active_id}}"  bindtap='cut'>
+        
+            <view class='img-box'><image src='{{ item.goods.goods_image }}'></image></view>
+            <view class='pro-info'>
+              <view class='pro-title'>
+              <text class="weui-badge">{{item.peoples}}人砍</text>
+              <text class="name">{{ item.goods.goods_name }}</text></view>
+              <view class='price-small'>
+              <text>￥{{item.floor_price}}</text>
+              <text class='original'>￥ {{item.goods.goods_sku.goods_price}}</text>
+              </view>
+            </view> 
+        </view>
+        </button>
+        </form>
+      </block>  
+    </scroll-view>
+  </view>
+</view>
+
+<view class='new-product'>
+  <view class='title-bar' bindtap='torday' >
+    <view class='space'></view>
+    <view class="weui-loadmore weui-loadmore_line" style="margin-top:3rem;">
+      <view class="weui-loadmore__tips weui-loadmore__tips_in-line">精选专区</view>
+    </view>
+  </view>
+  <view class='scroll-product'>
+    <scroll-view class="scroll-view_x" bindscrolltolower="bindDownIt" bindscrolltoupper="bindUpIt" scroll-x style="width: auto;overflow:hidden;">
+      <block wx:for="{{recommendList}}">
+        <view class='item'>
+          <navigator hover-class="none" url="/pages/goods/index?goods_id={{item.goods_id}}">
+            <view class='img-box'><image src='{{item.goods_image}}'></image></view>
+            <view class='pro-info'>
+              <view class='pro-title'>{{item.goods_name}}</view>
+              <view class='price-small'>
+              <text>￥{{item.goods_sku.goods_price}}</text>
+              <!-- <text class='cot-add' catchtap='add' data-goods_sku_id='{{item.goods_sku.goods_sku_id}}' data-goods_id='{{item.goods_id}}' data-idx='{{product.index}}'>+</text> -->
+              <image class='cot-add' src="../../images/flow.png" catchtap='add' data-goods_sku_id='{{item.goods_sku.goods_sku_id}}' data-goods_id='{{item.goods_id}}' role="img"></image>
+              </view>
+            </view>
+          </navigator>  
+        </view>
+      </block>  
+    </scroll-view>
+  </view>
+</view>
+

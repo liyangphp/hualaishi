@@ -1,0 +1,50 @@
+<view class="container b-f">
+
+  <!-- DIY组件 -->
+  <diy-component diyItems="{{ items }}"></diy-component>
+
+
+<view style="margin-top:60rpx;">
+  <view class="section"> 
+    <view class="address">
+      <i style="margin-right:10rpx;" class="fa fa-map-marker" aria-hidden="true"></i>
+      <text>{{city}}</text>
+    </view>
+    <view class="shopname">离您最近: {{shop.shop_name}}</view>
+    <view class="more" bindtap='goshoplist'>
+       <text>重新选择</text>
+       <i style="margin-left:10rpx;" class="fa fa-angle-right"></i>
+    </view>
+  </view>
+</view>
+
+<view style="margin-top:80rpx;">
+  <view class="column-session"> 
+    <!-- <navigator url="/pages/category/index?type={{DeliveryTypeEnum.EXPRESS.value}}">
+      <view class="ziqu">
+        {{DeliveryTypeEnum.EXPRESS.name}}
+      </view>
+    </navigator>
+    <navigator url="/pages/category/index?type={{DeliveryTypeEnum.EXTRACT.value}}">
+    <view class="waimai">
+        {{DeliveryTypeEnum.EXTRACT.name}}
+     </view>
+     </navigator> -->
+     <view class="ziqu" bindtap="goPituan">
+        拼团
+      </view>
+      <view class="ziqu" bindtap="goShop">
+        商城
+      </view>
+  </view>
+</view>
+
+
+
+  <!-- 底线 -->
+  <!-- <view class="title-footer p-r">
+    <text class="f-24 col-9 cont">我是有底线的</text>
+    <view class="hr"></view>
+  </view> -->
+
+</view>

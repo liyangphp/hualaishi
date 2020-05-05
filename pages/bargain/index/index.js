@@ -90,6 +90,7 @@ Page({
     let _this = this;
     App._get('bargain.active/lists', {
       page: _this.data.page || 1,
+      shop_id:wx.getStorageSync('shop').shop_id
     }, (result) => {
       let resList = result.data.activeList,
         dataList = _this.data.activeList;

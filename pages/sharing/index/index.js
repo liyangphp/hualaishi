@@ -17,6 +17,7 @@ Page({
     no_more: false, // 没有更多数据
     isLoading: true, // 是否正在加载中
     page: 1, // 当前页码
+    shop_id: wx.getStorageSync('shop') ? wx.getStorageSync('shop').shop_id:0,
   },
 
   /**
@@ -35,7 +36,7 @@ Page({
   getIndexData() {
     let _this = this;
     // 获取拼团首页
-    App._get('sharing.index/index', {}, function(result) {
+    App._get('sharing.index/index', {'shop_id':_this.data.shop_id}, function(result) {
       _this.setData({
         categoryList: result.data.categoryList
       });
